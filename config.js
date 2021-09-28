@@ -1,10 +1,15 @@
 // Autodesk Forge configuration
 module.exports = {
-    // Las variables de entorono de trabajo.
+    // Set environment variables or hard-code here
     credentials: {
-        client_id: process.env.FORGE_CLIENT_ID,
-        client_secret: process.env.FORGE_CLIENT_SECRET,
-        callback_url: process.env.FORGE_CALLBACK_URL
+        client_id: "NDxNRr7Q1zVqBANwbtuMakZeeKq86Yfi",
+        client_secret: "4FeaFRjvGcN5RHGd",
+        callback_url: "http%3A%2F%2Flocalhost%3A3000%2Fcallback%2Foauth"
     },
-    scopes:  ['bucket:create', 'bucket:read', 'data:read', 'data:create', 'data:write']
+    scopes: {
+        // Required scopes for the server-side application
+        internal: ['bucket:create', 'bucket:read', 'data:read', 'data:create', 'data:write'],
+        // Required scope for the client-side viewer
+        public: ['viewables:read']
+    }
 };

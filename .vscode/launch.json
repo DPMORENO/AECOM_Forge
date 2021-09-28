@@ -5,18 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "pwa-node",
+            "type": "node",
             "request": "launch",
             "name": "Launch Program",
             "env":{
                 "FORGE_CLEINT_ID":"NDxNRr7Q1zVqBANwbtuMakZeeKq86Yfi",
                 "FORGE_CLIENT_SECRET":"4FeaFRjvGcN5RHGd",
-                "FORGE_CALLBACK_URL":"http://127.0.0.1:3000/callback/oauth/"
+                "FORGE_CALLBACK_URL":"http://127.0.0.1:3000/callback/oauth"
             },
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${file}"
+            "program": "${workspaceFolder}/start.js"
         }
     ]
 }
